@@ -39,4 +39,6 @@ jobs:
     - name: Copy archive over ssh
       run: scp -i ~/.ssh/id_rsa ../archive.tgz admiral@"${{ env.SERVER_IP }}":~
       
+    - name: Unpack archive to /var/www/html over SSH
+      run: ssh -i ~/.ssh/id_rsa admiral@"${{ env.SERVER_IP }}" "tar -xzf ~/archive.tgz -C /var/www/html"
       
