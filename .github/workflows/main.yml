@@ -28,10 +28,10 @@ jobs:
       run: ls -l ~/.ssh/
       
     - name: Zip files for transfer
-      run: tar -czvf archive.tgz --exclude='*.git*' --ignore-failed-read .
+      run: tar -czvf ../archive.tgz --exclude='*.git*' .
     
     - name: List of files after packing
-      run: ls -al
+      run: ls -al ../
 
     - name: Remove files in /var/www/html/
       run: ssh -i ~/.ssh/id_rsa admiral@"${{ env.SERVER_IP }}" "rm -rfv /var/www/html/*"
