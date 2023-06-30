@@ -22,6 +22,7 @@ jobs:
         mkdir ~/.ssh/
         ssh-keyscan ${{ secrets.YC_INSTANCE_IP }} >> ~/.ssh/known_hosts
         echo "${{ secrets.YC_INSTANCES_SSH_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 /home/runner/.ssh/id_rsa
     
     - name: List of files in .ssh folder
       run: ls -l ~/.ssh/
