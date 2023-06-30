@@ -38,3 +38,5 @@ jobs:
     
     - name: Copy archive over ssh
       run: scp -i ~/.ssh/id_rsa ../archive.tgz admiral@"${{ env.SERVER_IP }}":~
+      
+      
