@@ -34,7 +34,7 @@ jobs:
       run: ls -al ../
 
     - name: Remove files in /var/www/html/
-      run: ssh -i ~/.ssh/id_rsa admiral@"${{ env.SERVER_IP }}" "rm -rfv /var/www/html/*"
+      run: ssh -i ~/.ssh/id_rsa admiral@"${{ env.SERVER_IP }}" "sudo rm -rfv /var/www/html/*"
     
     - name: Copy archive over ssh
       run: scp -i ~/.ssh/id_rsa ../archive.tgz admiral@"${{ env.SERVER_IP }}":~
