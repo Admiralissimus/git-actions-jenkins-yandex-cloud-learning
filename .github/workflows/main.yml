@@ -18,7 +18,10 @@ jobs:
       run: ls -al
 
     - name: Clear folder /var/www/html using ssh
-      run: echo -e "${{ secrets.YC_INSTANCES_SSH_KEY }}" > ~/.ssh/github_actions
+      run: |
+        mkdir ~/.ssh/
+        echo "${{ secrets.YC_INSTANCES_SSH_KEY }}" > ~/.ssh/github_actions
+        cat ~/.ssh/github_actions
 #        echo ${{ env.SERVER_IP }}
 #        #ssh-add - <<< "${${{ secrets.YC_INSTANCES_SSH_KEY }}}"
 #        #ssh -i key.txt admiral@${{ env.SERVER_IP }} "rm -rfv /var/www/html/*"
