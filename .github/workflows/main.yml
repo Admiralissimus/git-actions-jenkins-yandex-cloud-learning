@@ -1,7 +1,7 @@
 name: CI-CD-HTML
 
 env:
-  SERVER_IP : "158.160.59.117"
+  SERVER_IP : "62.84.115.50"
 
 on: [push]
 
@@ -14,6 +14,8 @@ jobs:
     - name: Git clone
       uses: actions/checkout@v3.5.3
     
-    - name: List of files
+    - name: List of files before
       run: ls -al
-      
+
+    - name: Clear folder /var/www/html using ssh
+      run: ssh -i ${{ secrets.YC_INSTANCES_SSH_KEY }} admiral@${{ env.SERVER_IP }} "rm -rfv /var/www/html/*"
