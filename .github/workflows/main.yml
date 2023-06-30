@@ -1,0 +1,5 @@
+name: CI-CD-HTML
+
+env:
+  SERVER_IP : "158.160.59.117"
+
