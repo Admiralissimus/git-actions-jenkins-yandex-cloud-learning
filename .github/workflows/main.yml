@@ -3,3 +3,17 @@ name: CI-CD-HTML
 env:
   SERVER_IP : "158.160.59.117"
 
+on: [push]
+
+jobs:
+  ci-cd:
+    runs-on: ubuntu-latest
+  
+    steps:
+    
+    - name: Git clone
+      uses: actions/checkout@v3.5.3
+    
+    - name: List of files
+      run: ls -al
+      
