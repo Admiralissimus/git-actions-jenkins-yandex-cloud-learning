@@ -18,4 +18,6 @@ jobs:
       run: ls -al
 
     - name: Clear folder /var/www/html using ssh
-      run: ssh -i "${{ secrets.YC_INSTANCES_SSH_KEY }}" admiral@${{ env.SERVER_IP }} "rm -rfv /var/www/html/*"
+      run: |
+        echo "${{ secrets.YC_INSTANCES_SSH_KEY }}" > key.txt
+        ssh -i key.txt admiral@${{ env.SERVER_IP }} "rm -rfv /var/www/html/*"
