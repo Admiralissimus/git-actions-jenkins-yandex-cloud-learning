@@ -18,7 +18,7 @@ jobs:
       run: ls -al
 
     - name: Clear folder /var/www/html using ssh
-      run: ping -c 4 ${{ env.SERVER_IP }}
+      run: ping -c 4 ${{ secrets.YC_INSTANCE_IP }}
 #        echo ${{ env.SERVER_IP }}
 #        #ssh-add - <<< "${${{ secrets.YC_INSTANCES_SSH_KEY }}}"
 #        #ssh -i key.txt admiral@${{ env.SERVER_IP }} "rm -rfv /var/www/html/*"
