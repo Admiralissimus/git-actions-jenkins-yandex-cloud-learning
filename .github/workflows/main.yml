@@ -28,7 +28,7 @@ jobs:
       run: ls -l ~/.ssh/
       
     - name: Zip files for transfer
-      run: tar -czvf archive.tgz --exclude='*.git*' .
+      run: tar -czvf archive.tgz --exclude='*.git*' --exclude='archive.tgz' .
     
     - name: List of files after packing
       run: ls -al
