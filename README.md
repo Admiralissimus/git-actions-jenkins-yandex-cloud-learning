@@ -7,4 +7,5 @@ In this project I am going to improve my skills in
 - yandex.cloud
 - etc.
 
-#Each experiment will be in its own branch.
+# Each experiment will be in its !!!OWN BRUNCH!!!
+# Look at branches.
