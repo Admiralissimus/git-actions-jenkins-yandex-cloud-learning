@@ -9,10 +9,10 @@ In this project I am going to improve my skills in
 
 This is CI/CD project (without testing part).
 
-This pipeline (deploy-python.job) downlads from github source code.
+This pipeline (deploy-python.job) downlads from github a source code.
 
-Builds docker image and pushes it in DockerHub.
+Builds a docker image and pushes it to the DockerHub.
 
-Image from docker hub is deployed to the server with docker engine.
+The image from DockerHub is deployed to the server with a docker engine.
 
 Uses webhook for automatic deploy.
