@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('CheckoutSCM') {
             steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Admiralissimus/python-app.git']])
+                checkout scmGit(branches: [[name: '*/CI-CD-docker-python-deploy-dockerhub']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Admiralissimus/git-actions-jenkins-yandex-cloud-learning']])
             }
         }
         stage('DockerBuild') {
