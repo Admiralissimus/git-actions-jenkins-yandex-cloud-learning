@@ -1,18 +1,17 @@
-/local-values.conf
-/target
-*~
-/bin
-*.idea
+.DS_Store 
+.project
+.settings
+target
+.idea
+.classpath
+.checkstyle
+.pmd
+*.log
+*.log.*
+*.iml  
+*.ipr
+*.iws
+*.versionsBackup
 
 *.iml
-*.eml
-/.classpath
-/.settings
-/.project
-
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+.DS_Store
