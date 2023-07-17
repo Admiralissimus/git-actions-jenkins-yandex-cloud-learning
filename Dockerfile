@@ -1,6 +1,3 @@
-FROM python:3.7
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+FROM tomcat:8
+LABEL app=docker-app
+COPY target/*.war /usr/local/tomcat/webapps/myweb.war
