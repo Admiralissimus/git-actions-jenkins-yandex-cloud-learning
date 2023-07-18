@@ -39,7 +39,7 @@ pipeline {
                         ssh-keyscan -t rsa,dsa ${webServerIP} >> ~/.ssh/known_hosts
                         ssh ubuntu@${webServerIP} docker rm -f java-web || true
                         ssh ubuntu@${webServerIP} docker pull admiralissimus/docker-web-java:latest
-                        ssh ubuntu@${webServerIP} docker run --name java-web -p 8888:9090 -d admiralissimus/docker-web-java:latest
+                        ssh ubuntu@${webServerIP} docker run --name java-web -p 8888:5000 -d admiralissimus/docker-web-java:latest
                     '''
                 }
             }
