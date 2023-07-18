@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'docker && linux && maven'
+        label 'docker && linux && maven && java11'
     }
     environment {
         webServerIP = "10.128.0.33"
